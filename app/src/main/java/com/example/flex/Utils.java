@@ -11,11 +11,18 @@ package com.example.flex;
 import java.util.ArrayList;
 
 public class Utils {
+    public ArrayList<Exercise> getAllExercises() {
+        return allExercises;
+    }
+
     private ArrayList<Exercise> allExercises;
     private static Utils instance ;
 
-    Utils(){
+
+
+    public  Utils(){
         if(allExercises==null){
+            allExercises = new ArrayList<>();
             init();
         }
     }
@@ -26,7 +33,10 @@ public class Utils {
         return instance;
     }
     private void init(){
-        allExercises.add(new Exercise(1,"Push Up","https://manofmany.com/wp-content/uploads/2020/02/How-to-do-a-proper-pushup.jpg"
+        this.allExercises.add(new Exercise(1,"Push Up","https://manofmany.com/wp-content/uploads/2020/02/How-to-do-a-proper-pushup.jpg"
                 ,"This is an Exercise to build chest muscles","Long Description"));
+        this.allExercises.add(new Exercise(2,"Pull Up","https://www.muscleandperformance.com/wp-content/uploads/2018/03/pull-ups-for-bigger-back.jpg",
+                "This is an Exercise to build back muscles","Long Description"));
+        
     }
 }
