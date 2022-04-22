@@ -8,7 +8,10 @@
 
 package com.example.flex;
 
+import static com.example.flex.ExerciseActivity.EXERCISE_KEY;
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -45,6 +49,14 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
         Glide.with(context)
                 .load(exercises.get(position).getImageurl())
                 .into(holder.exercise_image);
+        holder.parent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,ExerciseActivity.class);
+                intent.putExtra(EXERCISE_KEY,exercises.get(holder.getAdapterPosition()));
+                context.startActivity(intent);
+            }
+        });
 
     }
 
@@ -61,12 +73,14 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
     public  class  ViewHolder extends RecyclerView.ViewHolder {
         private TextView exercise_name , short_desc;
         private ImageView exercise_image;
+        private CardView parent ;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             exercise_name = itemView.findViewById(R.id.txt_exercise_name);
             short_desc=itemView.findViewById(R.id.txt_short_description);
             exercise_image =itemView.findViewById(R.id.img_exercise);
+            parent=itemView.findViewById(R.id.Exercise_Card);
         }
     }
 }

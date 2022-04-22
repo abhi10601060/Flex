@@ -8,7 +8,10 @@
 
 package com.example.flex;
 
-public class Exercise {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Exercise implements Parcelable {
     private int id;
     private String name;
     private String imageurl;
@@ -22,6 +25,26 @@ public class Exercise {
         this.short_description = short_description;
         this.long_description = long_description;
     }
+
+    protected Exercise(Parcel in) {
+        id = in.readInt();
+        name = in.readString();
+        imageurl = in.readString();
+        short_description = in.readString();
+        long_description = in.readString();
+    }
+
+    public static final Creator<Exercise> CREATOR = new Creator<Exercise>() {
+        @Override
+        public Exercise createFromParcel(Parcel in) {
+            return new Exercise(in);
+        }
+
+        @Override
+        public Exercise[] newArray(int size) {
+            return new Exercise[size];
+        }
+    };
 
     public int getId() {
         return id;
@@ -72,5 +95,19 @@ public class Exercise {
 
     public void setLong_description(String long_description) {
         this.long_description = long_description;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(id);
+        parcel.writeString(name);
+        parcel.writeString(imageurl);
+        parcel.writeString(short_description);
+        parcel.writeString(long_description);
     }
 }

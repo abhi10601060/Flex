@@ -19,9 +19,10 @@
         android:id="@+id/btn_add_to_plan"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="Add to your plan"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,7 +30,7 @@
         android:id="@+id/exercise_image"
         android:layout_width="230dp"
         android:layout_height="230dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/txt_Exercise_name"
         app:layout_constraintStart_toStartOf="@+id/txt_Exercise_name"
         app:layout_constraintTop_toBottomOf="@+id/txt_Exercise_name"
@@ -39,7 +40,7 @@
         android:id="@+id/txt_Exercise_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="exercise name"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -49,13 +50,13 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_add_to_plan" />
 
     <TextView
-        android:id="@+id/tt_long_description"
+        android:id="@+id/txt_long_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:text="Long Description"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/exercise_image" />
 
