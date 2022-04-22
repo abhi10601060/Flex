@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2022. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Details"
+        android:textStyle="bold"
+        android:id="@+id/txt_enter_details"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise Name"
+        android:layout_below="@+id/txt_enter_details"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:id="@+id/txt_name"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How much time do you have in mind."
+        android:layout_below="@+id/txt_name"
+        android:layout_marginTop="5dp"
+        android:id="@+id/txt_time"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Minutes"
+        android:layout_below="@+id/txt_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:inputType="number"
+        android:id="@+id/edt_minutes"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Day Below :"
+        android:layout_below="@+id/edt_minutes"
+        android:layout_marginTop="5dp"
+        android:id="@+id/txt_day"
+        android:layout_centerHorizontal="true"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/Days"
+        android:layout_below="@id/txt_day"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/days_spinner"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="dismiss"
+        android:layout_below="@+id/days_spinner"
+        android:layout_marginTop="15dp"
+        android:id="@+id/btn_dismiss"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_alignBottom="@+id/btn_dismiss"
+        android:layout_toRightOf="@+id/btn_dismiss"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/btn_add"/>
+
+
+</RelativeLayout>
