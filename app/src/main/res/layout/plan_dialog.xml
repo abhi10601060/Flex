@@ -18,15 +18,16 @@
         android:text="Enter Details"
         android:textStyle="bold"
         android:id="@+id/txt_enter_details"/>
+
     <TextView
+        android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Exercise Name"
         android:layout_below="@+id/txt_enter_details"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:id="@+id/txt_name"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:text="Exercise Name"
+        android:textStyle="bold" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

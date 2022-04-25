@@ -21,7 +21,7 @@ import com.bumptech.glide.Glide;
 
 import java.security.PublicKey;
 
-public class ExerciseActivity extends AppCompatActivity {
+public class ExerciseActivity extends AppCompatActivity implements PlanDialog.PassPlan {
     private Button btn_add ;
     private ImageView exercise_img;
     private TextView long_desc , exercise_name;
@@ -53,12 +53,19 @@ public class ExerciseActivity extends AppCompatActivity {
                 btn_add.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //TODO : add activity
+
                     }
                 });
             }
         }
 
 
+    }
+
+    @Override
+    public void getPlan(Plan plan) {
+        if(plan!=null){
+
+        }
     }
 }
