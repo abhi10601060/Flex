@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2022. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/plan_card"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exercise Name"
+            android:textStyle="bold"
+            android:id="@+id/plan_card_name" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_below="@+id/plan_card_name"
+            android:layout_marginTop="5dp"
+            android:id="@+id/plan_card_image"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration :"
+            android:layout_below="@+id/plan_card_image"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:id="@+id/plan_card_time_txt"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_unchecked_circle"
+            android:layout_toRightOf="@+id/plan_card_name"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/img_unchecked_circle"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_checked_circle"
+            android:layout_toRightOf="@+id/plan_card_name"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/img_checked_circle"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>
