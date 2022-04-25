@@ -16,6 +16,7 @@ public class Utils {
     }
 
     private ArrayList<Exercise> allExercises;
+    private  ArrayList<Plan> plans;
     private static Utils instance ;
 
 
@@ -38,5 +39,11 @@ public class Utils {
         this.allExercises.add(new Exercise(2,"Pull Up","https://www.muscleandperformance.com/wp-content/uploads/2018/03/pull-ups-for-bigger-back.jpg",
                 "This is an Exercise to build back muscles","Long Description"));
         
+    }
+    public boolean addPlan(Plan plan){
+        if(this.plans==null){
+            plans=new ArrayList<>();
+        }
+        return plans.add(plan);
     }
 }

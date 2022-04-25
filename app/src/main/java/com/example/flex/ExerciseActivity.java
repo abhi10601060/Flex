@@ -9,6 +9,7 @@
 package com.example.flex;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -53,6 +55,11 @@ public class ExerciseActivity extends AppCompatActivity implements PlanDialog.Pa
                 btn_add.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        PlanDialog dialog = new PlanDialog();
+                        Bundle bundle = new Bundle();
+                        bundle.putParcelable(EXERCISE_KEY,exercise);
+                        dialog.setArguments(bundle);
+                        dialog.show(getSupportFragmentManager(),"plan dialog");
 
                     }
                 });
@@ -65,6 +72,12 @@ public class ExerciseActivity extends AppCompatActivity implements PlanDialog.Pa
     @Override
     public void getPlan(Plan plan) {
         if(plan!=null){
+            if(Utils.getInstance().addPlan(plan)){
+                Toast.makeText(this, plan.getExercise().getName()+" Added to plan", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,PlanActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
 
         }
     }

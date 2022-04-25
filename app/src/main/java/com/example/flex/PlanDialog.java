@@ -70,7 +70,14 @@ public class PlanDialog extends DialogFragment {
 
                         Plan plan = new Plan(exercise,minutes,false,day);
 
-                        passPlan.getPlan(plan);
+                        try {
+                            passPlan = (PassPlan) getActivity();
+                            passPlan.getPlan(plan);
+                        }
+                        catch (ClassCastException e){
+                            e.printStackTrace();
+                        }
+
                     }
                 });
 

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlanActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/if_empty_RL"
+        android:visibility="gone">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add plan"
+            android:layout_centerInParent="true"
+            android:id="@+id/btn_add_plan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Your plan is empty !!"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_above="@+id/btn_add_plan"/>
+
+    </RelativeLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/parent"
+        android:visibility="visible">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mondayRL"
+                android:padding="20dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_monday"
+                    android:text="Monday"
+                    android:textSize="17dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:id="@+id/txt_monday_edit"
+                    android:textSize="17dp"
+                    android:layout_alignParentEnd="true"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_monday"
+                    android:layout_marginTop="7dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/RV_monday"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tuesday_RL"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/mondayRL">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_tuesday"
+                    android:text="Tuesday"
+                    android:textSize="17dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:id="@+id/txt_tuesday_edit"
+                    android:textSize="17dp"
+                    android:layout_alignParentEnd="true"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_tuesday"
+                    android:layout_marginTop="7dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/RV_tuesday"/>
+
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wednesday_RL"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tuesday_RL">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_wednesday"
+                    android:text="Wednesday"
+                    android:textSize="17dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:id="@+id/txt_wednesday_edit"
+                    android:textSize="17dp"
+                    android:layout_alignParentEnd="true"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_wednesday"
+                    android:layout_marginTop="7dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/RV_wednesday"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/thursday_RL"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/wednesday_RL">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_thursday"
+                    android:text="Thursday"
+                    android:textSize="17dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:id="@+id/txt_thursday_edit"
+                    android:textSize="17dp"
+                    android:layout_alignParentEnd="true"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_thursday"
+                    android:layout_marginTop="7dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/RV_thursday"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/friday_RL"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/thursday_RL">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_friday"
+                    android:text="Friday"
+                    android:textSize="17dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:id="@+id/txt_friday_edit"
+                    android:textSize="17dp"
+                    android:layout_alignParentEnd="true"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_friday"
+                    android:layout_marginTop="7dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/RV_friday"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/saturday_RL"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/friday_RL">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_saturday"
+                    android:text="Saturday"
+                    android:textSize="17dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:id="@+id/txt_saturday_edit"
+                    android:textSize="17dp"
+                    android:layout_alignParentEnd="true"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_saturday"
+                    android:layout_marginTop="7dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/RV_saturday"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sunday_RL"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/saturday_RL">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_sunday"
+                    android:text="Sunday"
+                    android:textSize="17dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:id="@+id/txt_sunday_edit"
+                    android:textSize="17dp"
+                    android:layout_alignParentEnd="true"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_sunday"
+                    android:layout_marginTop="7dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/RV_sunday"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
