@@ -53,7 +53,8 @@
             android:src="@drawable/ic_checked_circle"
             android:layout_toRightOf="@+id/plan_card_name"
             android:layout_marginLeft="30dp"
-            android:id="@+id/img_checked_circle"/>
+            android:id="@+id/img_checked_circle"
+            android:visibility="gone"/>
 
 
 
