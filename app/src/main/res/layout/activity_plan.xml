@@ -79,15 +79,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tuesday_RL"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/mondayRL">
+
                 <TextView
+                    android:id="@+id/txt_tuesday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txt_tuesday"
                     android:text="Tuesday"
-                    android:textSize="17dp"/>
+                    android:textSize="17dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -108,7 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/wednesday_RL"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/tuesday_RL">
                 <TextView
@@ -137,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/thursday_RL"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/wednesday_RL">
                 <TextView
@@ -166,7 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/friday_RL"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/thursday_RL">
                 <TextView
@@ -195,7 +196,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/saturday_RL"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/friday_RL">
                 <TextView
@@ -224,7 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/sunday_RL"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/saturday_RL">
                 <TextView
