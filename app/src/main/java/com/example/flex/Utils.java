@@ -50,4 +50,7 @@ public class Utils {
     public ArrayList<Plan> getPlans() {
         return plans;
     }
+    public boolean removePlan(Plan plan){
+        return plans.remove(plan);
+    }
 }

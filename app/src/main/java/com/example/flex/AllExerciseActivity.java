@@ -25,4 +25,5 @@ public class AllExerciseActivity extends AppCompatActivity {
         all_exercise_RV.setLayoutManager(new GridLayoutManager(this,2));
 
     }
+
 }

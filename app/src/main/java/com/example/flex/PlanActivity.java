@@ -38,6 +38,7 @@ public class PlanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_plan);
         viewinit();
         setView();
+        editButtonOnClick();
 
     }
     private void viewinit(){
@@ -132,6 +133,64 @@ public class PlanActivity extends AppCompatActivity {
 
         }
     }
+    private void editButtonOnClick(){
+        monday_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PlanActivity.this,EditActivity.class);
+                intent.putExtra("day","Monday");
+                startActivity(intent);
+            }
+        });
+        tuesday_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PlanActivity.this,EditActivity.class);
+                intent.putExtra("day","Tuesday");
+                startActivity(intent);
+            }
+        });
+        wednesday_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PlanActivity.this,EditActivity.class);
+                intent.putExtra("day","Wednesday");
+                startActivity(intent);
+            }
+        });
+        thursday_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PlanActivity.this,EditActivity.class);
+                intent.putExtra("day","Thursday");
+                startActivity(intent);
+            }
+        });
+        friday_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PlanActivity.this,EditActivity.class);
+                intent.putExtra("day","Friday");
+                startActivity(intent);
+            }
+        });
+        saturday_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PlanActivity.this,EditActivity.class);
+                intent.putExtra("day","Saturday");
+                startActivity(intent);
+            }
+        });
+        sunday_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PlanActivity.this,EditActivity.class);
+                intent.putExtra("day","Sunday");
+                startActivity(intent);
+            }
+        });
+    }
     private ArrayList<Plan> getPlanByDay(String day){
         ArrayList<Plan> plans = Utils.getInstance().getPlans();
         ArrayList<Plan> ans = new ArrayList<>();
@@ -148,6 +207,7 @@ public class PlanActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 }

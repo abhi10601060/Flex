@@ -5,11 +5,12 @@
       <map>
         <entry key="..\:/ANDROID DEVELOPEMENT/Project/app/src/main/res/drawable-anydpi/ic_checked_circle.xml" value="0.121" />
         <entry key="..\:/ANDROID DEVELOPEMENT/Project/app/src/main/res/layout/activity_all_exercise.xml" value="0.264" />
+        <entry key="..\:/ANDROID DEVELOPEMENT/Project/app/src/main/res/layout/activity_edit.xml" value="0.25" />
         <entry key="..\:/ANDROID DEVELOPEMENT/Project/app/src/main/res/layout/activity_exercise.xml" value="0.2" />
         <entry key="..\:/ANDROID DEVELOPEMENT/Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/ANDROID DEVELOPEMENT/Project/app/src/main/res/layout/activity_plan.xml" value="0.25052083333333336" />
         <entry key="..\:/ANDROID DEVELOPEMENT/Project/app/src/main/res/layout/exercise_cardview.xml" value="0.25" />
-        <entry key="..\:/ANDROID DEVELOPEMENT/Project/app/src/main/res/layout/plan_cardview.xml" value="0.25" />
+        <entry key="..\:/ANDROID DEVELOPEMENT/Project/app/src/main/res/layout/plan_cardview.xml" value="0.4" />
         <entry key="..\:/ANDROID DEVELOPEMENT/Project/app/src/main/res/layout/plan_dialog.xml" value="0.25" />
       </map>
     </option>
