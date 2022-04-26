@@ -92,7 +92,7 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.ViewHolder> {
                 public void onClick(View view) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(context)
                             .setTitle("Finished")
-                            .setMessage("Have you finished "+plans.get(holder.getAdapterPosition()).getExercise().getName())
+                            .setMessage("Have you finished "+plans.get(holder.getAdapterPosition()).getExercise().getName()+".")
                             .setNegativeButton("No", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -106,6 +106,32 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.ViewHolder> {
                                         if(p.equals(plans.get(holder.getAdapterPosition()))){
                                             p.setCompleted(true);
                                             Toast.makeText(context, "You have completed "+plans.get(holder.getAdapterPosition()).getExercise().getName() , Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                    notifyDataSetChanged();
+                                }
+                            });
+                    builder.create().show();
+                }
+            }); holder.checked_circle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context)
+                            .setTitle("Reset")
+                            .setMessage("Do you want to reset "+plans.get(holder.getAdapterPosition()).getExercise().getName()+".")
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            })
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    for(Plan p : plans){
+                                        if(p.equals(plans.get(holder.getAdapterPosition()))){
+                                            p.setCompleted(false);
+                                            Toast.makeText(context, "You have unchecked "+plans.get(holder.getAdapterPosition()).getExercise().getName() , Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                     notifyDataSetChanged();
